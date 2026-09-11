@@ -1,0 +1,15 @@
+{
+  "id": "ch9",
+  "title_fa": "آمیخته بازاریابی؛ نمای هلی‌کوپتری",
+  "title_en": "The Marketing Mix: A Helicopter View",
+  "author": "Walter van Waterschoot, Thomas Foscht, Thomas Brandstaetter & Andreas B. Eisingerich",
+  "intro_fa": "آمیخته بازاریابی یکی از قدیمی‌ترین و پرکاربردترین مفاهیم مدیریت بازاریابی است اما بررسی آن از نمای هلی‌کوپتری نشان می‌دهد این مفهوم به مراتب پیچیده‌تر از چهار P ساده است. واترشوت و همکارانش ریشه‌های تاریخی اصطلاح، چارچوب‌های مکمل و چالش‌های آمیخته در عصر دیجیتال را بررسی می‌کنند. هدف فصل فهم این است که چگونه عناصر آمیخته باید با هم هماهنگ شوند تا ارزش پایداری بسازند.",
+  "question_after_every": 2,
+  "parts": [
+    { "id": "p1", "title": "مفهوم آمیخته", "file": "ch9/part1.json" },
+    { "id": "p2", "title": "درختواره آمیخته", "file": "ch9/part2.json" },
+    { "id": "p3", "title": "چارچوب‌های مکمل", "file": "ch9/part3.json" },
+    { "id": "p4", "title": "هماهنگی و اهرم‌ها", "file": "ch9/part4.json" },
+    { "id": "p5", "title": "تحول آمیخته", "file": "ch9/part5.json" }
+  ]
+}

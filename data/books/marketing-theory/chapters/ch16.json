@@ -1,0 +1,15 @@
+{
+  "id": "ch16",
+  "title_fa": "روابط و شبکه‌ها",
+  "title_en": "Relationships and Networks",
+  "author": "Kristian Möller",
+  "intro_fa": "این فصل فراتر از تراکنش‌های ساده، به بررسی روابط بلندمدت و شبکه‌های کسب‌وکار می‌پردازد. نظریه‌های مختلف رابطه، مفهوم شبکه و جایگاه بنگاه در آن، مدیریت سبد روابط و پویایی‌های آینده را پوشش می‌دهد.",
+  "question_after_every": 2,
+  "parts": [
+    { "id": "p1", "title": "فراتر از تراکنش", "file": "ch16/part1.json" },
+    { "id": "p2", "title": "نظریه روابط", "file": "ch16/part2.json" },
+    { "id": "p3", "title": "شبکه‌ها", "file": "ch16/part3.json" },
+    { "id": "p4", "title": "پورتفولیو و بازاریابی حساب", "file": "ch16/part4.json" },
+    { "id": "p5", "title": "پویایی و آینده روابط", "file": "ch16/part5.json" }
+  ]
+}

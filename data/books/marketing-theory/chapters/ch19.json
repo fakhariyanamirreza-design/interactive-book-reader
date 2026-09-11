@@ -1,0 +1,15 @@
+{
+  "id": "ch19",
+  "title_fa": "منطق مسلط بر خدمت",
+  "title_en": "Service-Dominant Logic",
+  "author": "Stephen L. Vargo, Robert F. Lusch & Kaisa Koskela-Huotari",
+  "intro_fa": "منطق مسلط بر خدمت (S-D Logic) چارچوبی نظری است که مفاهیم بنیادین بازاریابی را از مبتنی بر کالا به مبتنی بر خدمت بازمی‌سازد. وارگو، لوش و کوسکلا-هوتاری استدلال می‌کنند که همه‌ی مبادلات در واقع مبادله‌ی خدمت‌اند و ارزش همواره در بستر مصرف و با مشارکت مشتری خلق می‌شود.",
+  "question_after_every": 2,
+  "parts": [
+    { "id": "p1", "title": "گذار از منطق کالامحور", "file": "ch19/part1.json" },
+    { "id": "p2", "title": "پیش‌فرض‌های بنیادین", "file": "ch19/part2.json" },
+    { "id": "p3", "title": "ارزش و هم‌آفرینی", "file": "ch19/part3.json" },
+    { "id": "p4", "title": "پیامدها برای رشته", "file": "ch19/part4.json" },
+    { "id": "p5", "title": "نقدها و آینده", "file": "ch19/part5.json" }
+  ]
+}

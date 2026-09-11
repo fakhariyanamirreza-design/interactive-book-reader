@@ -1,0 +1,15 @@
+{
+  "id": "ch14",
+  "title_fa": "نظریه‌های ارزش و ارزش برند",
+  "title_en": "Theories of Value and Brand Equity",
+  "author": "Mark S. Glynn & Roderick J. Brodie",
+  "intro_fa": "این فصل به بررسی مفهوم «ارزش» از دیدگاه‌های مختلف می‌پردازد: از ارزش استفاده و مبادله در اقتصاد کلاسیک تا ارزش درک‌شده و خلق مشترک ارزش در بازاریابی مدرن. سپس مفهوم برند و ارزش ویژه برند (Brand Equity) را از دیدگاه مشتری، مالی و رفتاری تحلیل می‌کند و مدل‌های سنجش و مدیریت برند را مرور می‌کند.",
+  "question_after_every": 2,
+  "parts": [
+    { "id": "p1", "title": "مفهوم ارزش", "file": "ch14/part1.json" },
+    { "id": "p2", "title": "ارزش در سطح بنگاه و شبکه", "file": "ch14/part2.json" },
+    { "id": "p3", "title": "برند بهمثابه ارزش", "file": "ch14/part3.json" },
+    { "id": "p4", "title": "سنجش ارزش برند", "file": "ch14/part4.json" },
+    { "id": "p5", "title": "مدیریت و آینده", "file": "ch14/part5.json" }
+  ]
+}

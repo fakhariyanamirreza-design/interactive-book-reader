@@ -1,0 +1,15 @@
+{
+  "id": "ch17",
+  "title_fa": "نظریه‌های خرده‌فروشی",
+  "title_en": "Theories of Retailing",
+  "author": "Christopher Moore & Stephen Doyle",
+  "intro_fa": "این فصل کارکرد خرده‌فروشی در کانال توزیع، نظریه‌های تحول قالب‌ها و چرخه‌های خرده‌فروشی، رقابت مکانی، خرده‌فروشی دیجیتال و آینده قالب‌های نوین را بررسی می‌کند.",
+  "question_after_every": 2,
+  "parts": [
+    { "id": "p1", "title": "ماهیت خرده‌فروشی", "file": "ch17/part1.json" },
+    { "id": "p2", "title": "نظریه‌های قالب و تحول", "file": "ch17/part2.json" },
+    { "id": "p3", "title": "شدتگزینی و مکان", "file": "ch17/part3.json" },
+    { "id": "p4", "title": "خرده‌فروشی نوین", "file": "ch17/part4.json" },
+    { "id": "p5", "title": "رقابت و آینده", "file": "ch17/part5.json" }
+  ]
+}
