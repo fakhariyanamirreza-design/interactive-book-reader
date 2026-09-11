@@ -1,0 +1,84 @@
+{
+  "chapters": [
+    {
+      "id": "ch1",
+      "title_fa": "بحران بازاریابی سنتی",
+      "title_en": "The Crisis of Traditional Marketing",
+      "author": "Seth Godin",
+      "pages": "12-26",
+      "status": "ready",
+      "file": "ch1.json",
+      "sections": 8
+    },
+    {
+      "id": "ch2",
+      "title_fa": "مشکل توجه",
+      "title_en": "The Attention Problem",
+      "author": "Seth Godin",
+      "pages": "27-37",
+      "status": "ready",
+      "file": "ch2.json",
+      "sections": 8
+    },
+    {
+      "id": "ch3",
+      "title_fa": "ایده‌هایی که پخش می‌شوند، برنده‌اند",
+      "title_en": "Ideas That Spread, Win",
+      "author": "Seth Godin",
+      "pages": "38-52",
+      "status": "ready",
+      "file": "ch3.json",
+      "sections": 9
+    },
+    {
+      "id": "ch4",
+      "title_fa": "چرا گاو بودن سخت است",
+      "title_en": "Why Being the Cow Is Hard",
+      "author": "Seth Godin",
+      "pages": "53-66",
+      "status": "ready",
+      "file": "ch4.json",
+      "sections": 8
+    },
+    {
+      "id": "ch5",
+      "title_fa": "نفع گاو بنفش",
+      "title_en": "The Benefits of the Purple Cow",
+      "author": "Seth Godin",
+      "pages": "67-79",
+      "status": "ready",
+      "file": "ch5.json",
+      "sections": 9
+    },
+    {
+      "id": "ch6",
+      "title_fa": "ایجاد گاو بنفش در عمل",
+      "title_en": "Building the Cow in Practice",
+      "author": "Seth Godin",
+      "pages": "80-94",
+      "status": "ready",
+      "file": "ch6.json",
+      "sections": 11
+    },
+    {
+      "id": "ch7",
+      "title_fa": "نقش تازه‌ی بازاریاب",
+      "title_en": "The New Role of the Marketer",
+      "author": "Seth Godin",
+      "pages": "95-109",
+      "status": "ready",
+      "file": "ch7.json",
+      "sections": 9
+    },
+    {
+      "id": "ch8",
+      "title_fa": "پرسش بزرگ و جاده‌ی پیش رو",
+      "title_en": "The Big Question and the Way Forward",
+      "author": "Seth Godin",
+      "pages": "110-125",
+      "status": "ready",
+      "file": "ch8.json",
+      "sections": 8
+    }
+  ]
+}

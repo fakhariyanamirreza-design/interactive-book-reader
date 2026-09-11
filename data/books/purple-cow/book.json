@@ -1,0 +1,36 @@
+{
+  "id": "purple-cow",
+  "title_fa": "گاو بنفش",
+  "title_en": "Purple Cow: Transform Your Business by Being Remarkable",
+  "edition": "نسخه‌ی تازه",
+  "authors": "ست گودین (Seth Godin)",
+  "publisher": "Portfolio / Penguin",
+  "year": 2003,
+  "pages": 186,
+  "language": "fa",
+  "cover": {
+    "accent_from": "#6b1e8f",
+    "accent_to": "#8f4bd0",
+    "label": "Purple Cow"
+  },
+  "description_fa": "کلاسیکِ ست گودین درباره‌ی «برجسته‌بودن»؛ چرا محصولاتی که فقط «خوب» و «معمولی» هستند نامرئی می‌شوند و چرا باید چیزی شبیه گاو بنفش بسازید که مردم درباره‌اش حرف بزنند.",
+  "capsule_fa": "به‌جای بهترشدنِ اندک، برجسته شدن؛ محصولی بساز که مردم درباره‌اش حرف بزنند.",
+  "status": "کامل",
+  "chapters_ui": [
+    {
+      "name": "بخش یک: بحران بازاریابی سنتی",
+      "from": 1,
+      "to": 2
+    },
+    {
+      "name": "بخش دو: مکانیکِ پخش شدن",
+      "from": 3,
+      "to": 5
+    },
+    {
+      "name": "بخش سه: ایجاد و نقش گاو بنفش",
+      "from": 6,
+      "to": 8
+    }
+  ]
+}

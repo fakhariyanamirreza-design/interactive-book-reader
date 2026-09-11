@@ -1,6 +1,8 @@
 {
-  "version": 1,
+  "version": 3,
   "books": [
-    "marketing-theory"
+    "marketing-theory",
+    "purple-cow",
+    "scientific-advertising"
   ]
 }

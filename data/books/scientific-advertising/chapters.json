@@ -1,0 +1,214 @@
+{
+  "chapters": [
+    {
+      "id": "ch1",
+      "title_fa": "قوانین تبلیغ چگونه پدید می‌آیند",
+      "title_en": "How Advertising Laws Are Established",
+      "author": "Claude C. Hopkins",
+      "pages": "1-8",
+      "status": "ready",
+      "file": "ch1.json",
+      "sections": 13
+    },
+    {
+      "id": "ch2",
+      "title_fa": "تبلیغ، فروشندگیِ نوشتاری",
+      "title_en": "Just Salesmanship",
+      "author": "Claude C. Hopkins",
+      "pages": "9-14",
+      "status": "ready",
+      "file": "ch2.json",
+      "sections": 12
+    },
+    {
+      "id": "ch3",
+      "title_fa": "خدمت ارائه دهید",
+      "title_en": "Offer Service",
+      "author": "Claude C. Hopkins",
+      "pages": "15-18",
+      "status": "ready",
+      "file": "ch3.json",
+      "sections": 9
+    },
+    {
+      "id": "ch4",
+      "title_fa": "تبلیغ سفارش‌پستی؛ چه چیزی می‌آموزد",
+      "title_en": "Mail Order Advertising - What It Teaches",
+      "author": "Claude C. Hopkins",
+      "pages": "19-26",
+      "status": "ready",
+      "file": "ch4.json",
+      "sections": 13
+    },
+    {
+      "id": "ch5",
+      "title_fa": "عنوان‌ها",
+      "title_en": "Headlines",
+      "author": "Claude C. Hopkins",
+      "pages": "27-32",
+      "status": "ready",
+      "file": "ch5.json",
+      "sections": 8
+    },
+    {
+      "id": "ch6",
+      "title_fa": "روان‌شناسی",
+      "title_en": "Psychology",
+      "author": "Claude C. Hopkins",
+      "pages": "33-40",
+      "status": "ready",
+      "file": "ch6.json",
+      "sections": 14
+    },
+    {
+      "id": "ch7",
+      "title_fa": "خاص و دقیق بودن",
+      "title_en": "Being Specific",
+      "author": "Claude C. Hopkins",
+      "pages": "41-46",
+      "status": "ready",
+      "file": "ch7.json",
+      "sections": 9
+    },
+    {
+      "id": "ch8",
+      "title_fa": "داستان کامل را بگویید",
+      "title_en": "Tell Your Full Story",
+      "author": "Claude C. Hopkins",
+      "pages": "47-52",
+      "status": "ready",
+      "file": "ch8.json",
+      "sections": 9
+    },
+    {
+      "id": "ch9",
+      "title_fa": "هنر در تبلیغ",
+      "title_en": "Art in Advertising",
+      "author": "Claude C. Hopkins",
+      "pages": "53-58",
+      "status": "ready",
+      "file": "ch9.json",
+      "sections": 9
+    },
+    {
+      "id": "ch10",
+      "title_fa": "چیزهایی که گران تمام می‌شوند",
+      "title_en": "Things Too Costly",
+      "author": "Claude C. Hopkins",
+      "pages": "59-64",
+      "status": "ready",
+      "file": "ch10.json",
+      "sections": 9
+    },
+    {
+      "id": "ch11",
+      "title_fa": "اطلاعات",
+      "title_en": "Information",
+      "author": "Claude C. Hopkins",
+      "pages": "65-70",
+      "status": "ready",
+      "file": "ch11.json",
+      "sections": 9
+    },
+    {
+      "id": "ch12",
+      "title_fa": "استراتژی",
+      "title_en": "Strategy",
+      "author": "Claude C. Hopkins",
+      "pages": "71-78",
+      "status": "ready",
+      "file": "ch12.json",
+      "sections": 11
+    },
+    {
+      "id": "ch13",
+      "title_fa": "به‌کارگیری نمونه‌ها",
+      "title_en": "Use of Samples",
+      "author": "Claude C. Hopkins",
+      "pages": "79-86",
+      "status": "ready",
+      "file": "ch13.json",
+      "sections": 9
+    },
+    {
+      "id": "ch14",
+      "title_fa": "دستیابی به توزیع",
+      "title_en": "Getting Distribution",
+      "author": "Claude C. Hopkins",
+      "pages": "87-92",
+      "status": "ready",
+      "file": "ch14.json",
+      "sections": 9
+    },
+    {
+      "id": "ch15",
+      "title_fa": "کمپین‌های آزمایشی",
+      "title_en": "Test Campaigns",
+      "author": "Claude C. Hopkins",
+      "pages": "93-98",
+      "status": "ready",
+      "file": "ch15.json",
+      "sections": 8
+    },
+    {
+      "id": "ch16",
+      "title_fa": "تکیه به خرده‌فروش‌ها",
+      "title_en": "Leaning on Dealers",
+      "author": "Claude C. Hopkins",
+      "pages": "99-102",
+      "status": "ready",
+      "file": "ch16.json",
+      "sections": 7
+    },
+    {
+      "id": "ch17",
+      "title_fa": "فردیت و تفاوت",
+      "title_en": "Individuality",
+      "author": "Claude C. Hopkins",
+      "pages": "103-106",
+      "status": "ready",
+      "file": "ch17.json",
+      "sections": 7
+    },
+    {
+      "id": "ch18",
+      "title_fa": "تبلیغ منفی",
+      "title_en": "Negative Advertising",
+      "author": "Claude C. Hopkins",
+      "pages": "107-108",
+      "status": "ready",
+      "file": "ch18.json",
+      "sections": 4
+    },
+    {
+      "id": "ch19",
+      "title_fa": "نامه‌نگاری",
+      "title_en": "Letter Writing",
+      "author": "Claude C. Hopkins",
+      "pages": "109-112",
+      "status": "ready",
+      "file": "ch19.json",
+      "sections": 9
+    },
+    {
+      "id": "ch20",
+      "title_fa": "نامی که کمک می‌کند",
+      "title_en": "A Name That Helps",
+      "author": "Claude C. Hopkins",
+      "pages": "113-116",
+      "status": "ready",
+      "file": "ch20.json",
+      "sections": 4
+    },
+    {
+      "id": "ch21",
+      "title_fa": "کار خوب و سودمند",
+      "title_en": "Good Business",
+      "author": "Claude C. Hopkins",
+      "pages": "117-120",
+      "status": "ready",
+      "file": "ch21.json",
+      "sections": 7
+    }
+  ]
+}

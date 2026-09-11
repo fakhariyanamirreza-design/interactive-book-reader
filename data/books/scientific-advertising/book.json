@@ -1,0 +1,41 @@
+{
+  "id": "scientific-advertising",
+  "title_fa": "تبلیغات علمی",
+  "title_en": "Scientific Advertising",
+  "edition": "چاپ ۱۹۲۳ (بازچاپ) — ویرایش ۲۰۱۵",
+  "authors": "کلود سی. هاپکینز (Claude C. Hopkins)",
+  "publisher": "CreateSpace",
+  "year": 2015,
+  "pages": 134,
+  "language": "fa",
+  "cover": {
+    "accent_from": "#8f2f2f",
+    "accent_to": "#d9712f",
+    "label": "Scientific Advertising"
+  },
+  "description_fa": "متنِ کلاسیک تبلیغاتِ پاسخ‌مستقیم؛ هاپکینز تبلیغ را «فروشندگیِ چاپی» می‌داند و با مثال‌های واقعی، قانون‌های تبدیل بازدیدکننده به خریدار را روایت می‌کند.",
+  "capsule_fa": "تبلیغ = فروشندگیِ چاپی؛ اساسِ آزمون، اندازه‌گیری و پرداختن به منافع مشتری.",
+  "status": "کامل",
+  "chapters_ui": [
+    {
+      "name": "بخش یک: پایه‌های تبلیغ",
+      "from": 1,
+      "to": 5
+    },
+    {
+      "name": "بخش دو: روان‌شناسی و فرم",
+      "from": 6,
+      "to": 11
+    },
+    {
+      "name": "بخش سه: استراتژی و مسیر فروش",
+      "from": 12,
+      "to": 16
+    },
+    {
+      "name": "بخش چهار: تمایز و حسن شهرت",
+      "from": 17,
+      "to": 21
+    }
+  ]
+}
