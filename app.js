@@ -1,5 +1,5 @@
 /* کتاب‌خوان — داشبورد مطالعه‌ی تعاملی
-   معماری چندکتابی: data/books/manifest.json → book.json → chapters.json → ch{N}.json → part files
+   معماری: manifest.json → book.json → chapters.json (آمار) + chapterIndex.json (ساختار) → ch{N}.json + part files
 */
 'use strict';
 
@@ -99,6 +99,7 @@ async function loadBook(bookId) { return loadJSON(`${DATA_ROOT}/${bookId}/book.j
 async function loadChapters(bookId) { return loadJSON(`${DATA_ROOT}/${bookId}/chapters.json`); }
 async function loadChapter(bookId, chId) { return loadJSON(`${DATA_ROOT}/${bookId}/chapters/${chId}.json`); }
 async function loadPart(bookId, chId, part) { return loadJSON(`${DATA_ROOT}/${bookId}/chapters/${part.file}`); }
+async function loadChapterIndex(bookId) { return loadJSON(`${DATA_ROOT}/${bookId}/chapterIndex.json`); }
 
 /* ---------------- Utils ---------------- */
 
@@ -231,8 +232,9 @@ async function bookCard(book) {
 /* ---------------- Book dashboard ---------------- */
 
 async function renderBook(view, bookId) {
-  const [book, chapters] = await Promise.all([loadBook(bookId), loadChapters(bookId)]);
+  const [book, chapters, chIdx] = await Promise.all([loadBook(bookId), loadChapters(bookId), loadChapterIndex(bookId)]);
   book.chapterCount = chapters.chapters.length;
+  const chxById = new Map((chIdx?.chapters || []).map((c) => [c.id, c]));
 
   const partNames = normalizePartNames(book.chapters_ui);
 
@@ -245,14 +247,13 @@ async function renderBook(view, bookId) {
   view.appendChild(hero(book, { ready: readyChs, done, total: allSecs.total, pct: bookPct }));
   view.appendChild(stats(book, { ready: readyChs, done, total: allSecs.total, pct: bookPct }));
 
-  // chapter groups
   const groups = groupChapters(chapters.chapters, partNames);
   for (const g of groups) {
     view.appendChild(el('div', 'sec-title',
       `<span class="bar"></span><h2>${esc(g.name)}</h2><span class="count">${faNum(g.items.length)} فصل</span>`));
     for (const ch of g.items) {
       try {
-        view.appendChild(await chapterCard(bookId, ch, partNames));
+        view.appendChild(await chapterCard(bookId, ch, partNames, chxById.get(ch.id)));
       } catch (err) {
         console.error('Error rendering chapter', ch.id, err);
       }
@@ -285,7 +286,7 @@ function groupChapters(chapters, groups) {
   return result.filter((g) => g.items.length);
 }
 
-async function chapterCard(bookId, ch, partNames) {
+async function chapterCard(bookId, ch, partNames, chx) {
   const card = el('div', 'chapter', '');
   const ready = ch.status === 'ready';
   const statusCls = ready ? 'ready' : 'pending';
@@ -304,24 +305,45 @@ async function chapterCard(bookId, ch, partNames) {
 
   if (ready) {
     const body = el('div', 'chapter-body', '');
-    const chapterData = await loadChapter(bookId, ch.id);
-    const parts = [];
-    for (const p of chapterData.parts) parts.push(await loadPart(bookId, ch.id, p));
-    const allSecs = chaptersSections(chapterData, parts);
-    const doneSet = store.doneSecs(bookId, ch.id);
-    const doneCount = allSecs.filter((s) => doneSet.has(s.key)).length;
-    const pct = allSecs.length ? doneCount / allSecs.length : 0;
+    const partsMeta = chx && chx.parts;
 
-    body.appendChild(el('div', 'chapter-pbar', `
-      <div class="pmeta"><span>پیشرفت فصل</span><b>${faNum(doneCount)} از ${faNum(allSecs.length)} بخش</b></div>
-      <div class="pbar"><i class="${pct === 1 ? 'green' : ''}" style="transform:scaleX(${pct})"></i></div>`));
+    if (partsMeta && partsMeta.length) {
+      const doneSet = store.doneSecs(bookId, ch.id);
+      const secsFlat = [];
+      partsMeta.forEach((p) => (p.secs || []).forEach((s) => secsFlat.push({ key: `${p.id}_${s.id}`, s, p })));
+      const doneCount = secsFlat.filter((x) => doneSet.has(x.key)).length;
+      const pct = secsFlat.length ? doneCount / secsFlat.length : 0;
 
-    const continueBtn = el('button', 'btn btn-primary btn-sm', pct === 1 ? '✓ مرور دوباره فصل' : '▶ ادامه خواندن');
-    continueBtn.style.marginTop = '12px';
-    continueBtn.onclick = () => go(`#/ch/${bookId}/${ch.id}/read`);
-    body.appendChild(continueBtn);
+      body.appendChild(el('div', 'chapter-pbar', `
+        <div class="pmeta"><span>پیشرفت فصل</span><b>${faNum(doneCount)} از ${faNum(secsFlat.length)} بخش</b></div>
+        <div class="pbar"><i class="${pct === 1 ? 'green' : ''}" style="transform:scaleX(${pct})"></i></div>`));
 
-    parts.forEach((part, pi) => body.appendChild(partBlock(bookId, ch.id, chapterData, part, doneSet)));
+      const continueBtn = el('button', 'btn btn-primary btn-sm', pct === 1 ? '✓ مرور دوباره فصل' : '▶ ادامه خواندن');
+      continueBtn.style.marginTop = '12px';
+      continueBtn.onclick = () => go(`#/ch/${bookId}/${ch.id}/read`);
+      body.appendChild(continueBtn);
+
+      partsMeta.forEach((p) => body.appendChild(partBlockMeta(bookId, ch.id, p, doneSet)));
+    } else {
+      const chapterData = await loadChapter(bookId, ch.id);
+      const parts = [];
+      for (const p of chapterData.parts) parts.push(await loadPart(bookId, ch.id, p));
+      const doneSet = store.doneSecs(bookId, ch.id);
+      const secsFlat = chaptersSections(chapterData, parts);
+      const doneCount = secsFlat.filter((s) => doneSet.has(s.key)).length;
+      const pct = secsFlat.length ? doneCount / secsFlat.length : 0;
+
+      body.appendChild(el('div', 'chapter-pbar', `
+        <div class="pmeta"><span>پیشرفت فصل</span><b>${faNum(doneCount)} از ${faNum(secsFlat.length)} بخش</b></div>
+        <div class="pbar"><i class="${pct === 1 ? 'green' : ''}" style="transform:scaleX(${pct})"></i></div>`));
+
+      const continueBtn = el('button', 'btn btn-primary btn-sm', pct === 1 ? '✓ مرور دوباره فصل' : '▶ ادامه خواندن');
+      continueBtn.style.marginTop = '12px';
+      continueBtn.onclick = () => go(`#/ch/${bookId}/${ch.id}/read`);
+      body.appendChild(continueBtn);
+
+      parts.forEach((part, pi) => body.appendChild(partBlock(bookId, ch.id, chapterData, part, doneSet)));
+    }
 
     card.appendChild(body);
     card.addEventListener('click', (e) => {
@@ -355,6 +377,33 @@ function partBlock(bookId, chId, chapterData, part, doneSet) {
       <span class="dot">✓</span>
       <span class="txt">${esc(x.s.title)}</span>
       ${x.s.question ? '<span class="qbadge">؟</span>' : ''}`);
+    chip.onclick = () => go(`#/ch/${bookId}/${chId}/read/${x.key}`);
+    grid.appendChild(chip);
+  });
+  block.appendChild(grid);
+  block.appendChild(el('div', 'pbar', `<i class="${pct === 1 ? 'green' : ''}" style="transform:scaleX(${pct})"></i>`));
+  block.querySelector('.pbar').style.marginTop = '10px';
+  return block;
+}
+
+function partBlockMeta(bookId, chId, part, doneSet) {
+  const block = el('div', 'part-block', '');
+  const secs = (part.secs || []).map((s) => ({ key: `${part.id}_${s.id}`, s }));
+  const doneInPart = secs.filter((x) => doneSet.has(x.key)).length;
+  const pct = secs.length ? doneInPart / secs.length : 0;
+
+  block.appendChild(el('div', 'part-head', `
+    <span class="part-badge">بخش ${faNum(part.id.replace(/\D/g, ''))}</span>
+    <h4>${esc(part.title)}</h4>
+    <span class="pcount">${faNum(doneInPart)}/${faNum(secs.length)}</span>`));
+
+  const grid = el('div', 'sections', '');
+  secs.forEach((x) => {
+    const done = doneSet.has(x.key);
+    const chip = el('button', 'sec-chip' + (done ? ' done' : ''), `
+      <span class="dot">✓</span>
+      <span class="txt">${esc(x.s.title)}</span>
+      ${x.s.q ? '<span class="qbadge">؟</span>' : ''}`);
     chip.onclick = () => go(`#/ch/${bookId}/${chId}/read/${x.key}`);
     grid.appendChild(chip);
   });
@@ -422,12 +471,7 @@ async function countChapterSections(bookId, chapters) {
   bookMetaCounts[bookId] = { sections: map, chapters: chapters.length };
   for (const ch of chapters) {
     if (ch.status !== 'ready') continue;
-    const chap = await loadChapter(bookId, ch.id);
-    let n = 0;
-    for (const p of chap.parts) {
-      const part = await loadPart(bookId, ch.id, p);
-      n += part.sections.length;
-    }
+    const n = ch.sections || 0;
     map[ch.id] = n;
     total += n;
   }
