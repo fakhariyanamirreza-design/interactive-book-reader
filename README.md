@@ -1,4 +1,4 @@
-# کتاب‌خوان — قفسه‌ی مطالعه‌ی تعاملی
+# Interactive Book Reader
 
 یک وب‌اپ ساده و سبک (بدون سرور و بدون نصب) برای خواندن کتاب‌ها با بخش‌بندی، ساده‌سازی متن، یادداشت و پیگیری پیشرفت. همه‌ی داده‌ها فایل‌های JSON هستند و کل پروژه با HTML/CSS/JS خالص کار می‌کند.
 
@@ -6,9 +6,9 @@
 
 سایت روی GitHub Pages منتشر شده است:
 
-**https://fakhariyanamirreza-design.github.io/Marketing-Theory/**
+**https://fakhariyanamirreza-design.github.io/interactive-book-reader/**
 
-## کتاب‌های قفسه
+## کتاب‌ها
 
 | کتاب | نویسنده | فصل / بخش / سکشن | وضعیت |
 |------|---------|------------------|--------|

@@ -1,4 +1,4 @@
-/* کتاب‌خوان — داشبورد مطالعه‌ی تعاملی
+/* خواننده‌ی تعاملی کتاب — داشبورد مطالعه‌ی تعاملی
    معماری: manifest.json → book.json → chapters.json (آمار) + chapterIndex.json (ساختار) → ch{N}.json + part files
 */
 'use strict';
@@ -182,7 +182,7 @@ function renderFetchHelp(view) {
   view.innerHTML = `
     <div class="empty">
       <div class="big">📚</div>
-      <h2>برای ورق‌زدن در قفسه، یک وب‌سرور کوچک لازم است</h2>
+      <h2>برای ورق‌زدن در خواننده‌ی تعاملی، یک وب‌سرور کوچک لازم است</h2>
       <p style="margin-top:10px">مرورگر اجازه‌ی بارگذاری فایل‌ها را از مسیر مستقیم نمی‌دهد. از پوشه‌ی پروژه یکی از این دو دستور را اجرا کن:</p>
       <p style="direction:ltr; font-family:monospace; background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:10px; margin:14px auto; display:inline-block">python -m http.server 8000</p>
       <p style="direction:ltr; font-family:monospace; background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:10px; margin:0 auto; display:inline-block">npx serve .</p>
@@ -205,7 +205,7 @@ async function renderHome(view, manifest) {
 
   view.innerHTML = '';
   view.appendChild(el('div', 'sec-title',
-    `<span class="bar"></span><h2>قفسه‌ی کتاب‌ها</h2><span class="count">${faNum(books.length)} کتاب</span>`));
+    `<span class="bar"></span><h2>خواننده‌ی تعاملی کتاب</h2><span class="count">${faNum(books.length)} کتاب</span>`));
   view.appendChild(cards);
 }
 
